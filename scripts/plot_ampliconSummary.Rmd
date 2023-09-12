@@ -107,8 +107,8 @@ tree = read.tree(treefile)
 ```
 
 ###STEP8: Construct Phyloseq object
-To construct phyloseq object, otu table, taxonomy table, and sampleData are required. Phylogenetic tree can be included, but it is not necessary for constructing phyloseq object.
-Construct Phyloseq object called "Physeq"
+#To construct phyloseq object, otu table, taxonomy table, and sampleData are required. Phylogenetic tree can be included, but it is not necessary for constructing phyloseq object.
+#Construct Phyloseq object called "Physeq"
 
 ```{r warning=FALSE}
 physeq = phyloseq(OTU,TAX,sampleData,tree)
@@ -243,7 +243,7 @@ plot_diff <- plot_microshades(new_groups$mdf, new_groups$cdf) +
  scale_y_continuous(labels = scales::percent, expand = expansion(0)) +
   theme(legend.position = "none")  +
   theme(axis.text.x = element_text(size= 6)) +
-  facet_wrap(~Tissue_type + Location + , scales = "free_x", nrow = 2) +
+  facet_wrap(~Tissue_type + Location, scales = "free_x", nrow = 2) +
   theme(axis.text.x = element_text(size= 6)) + 
   theme(plot.margin = margin(6,20,6,6))
 
